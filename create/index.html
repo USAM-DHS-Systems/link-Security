@@ -31,7 +31,7 @@
                 localStorage.setItem('accessPassword', 'USAM_DHS_Data_Security_System_Risks#010102?');
             }
 
-            if (enteredPassword === localStorage.getItem('accessPassword')) {
+            if (enteredPassword === ${{ env.TOKEN }}) {
                 isAuthenticated = true;
                 document.getElementById("password-protection").style.display = "none";
                 document.getElementById("content").style.display = "block";
